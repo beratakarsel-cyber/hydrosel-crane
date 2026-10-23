@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Hydrosel Crane: Deep Slate Black, White, Industrial Green (#28A745 / #32CD32) */
+:root {
+  color-scheme: dark;
+  --background: #0a0d10;
+  --foreground: #ffffff;
+  --card: #14181d;
+  --card-foreground: #ffffff;
+  --popover: #14181d;
+  --popover-foreground: #ffffff;
+  --primary: #32cd32;
+  --primary-foreground: #000000;
+  --brand-green-deep: #28a745;
+  --secondary: #1c2127;
+  --secondary-foreground: #ffffff;
+  --muted: #1c2127;
+  --muted-foreground: #9ca3af;
+  --accent: #1c2127;
+  --accent-foreground: #ffffff;
+  --destructive: #f87171;
+  --border: rgb(255 255 255 / 0.1);
+  --input: rgb(255 255 255 / 0.16);
+  --ring: #32cd32;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@utility glass {
+  background-color: rgb(20 24 29 / 0.6);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgb(148 163 184 / 0.14);
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(rgb(148 163 184 / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(148 163 184 / 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility glow {
+  box-shadow: 0 0 0 1px rgb(50 205 50 / 0.45), 0 8px 32px -6px rgb(50 205 50 / 0.5);
+}
