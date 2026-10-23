@@ -9,7 +9,9 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 })
 
-export const metadata: Metadata = {
+export const metadata: Metadata = {verification: {
+  google: "iOvFnMbbG4OpnQHo0kqD9iPZIRoJxdlv7ti0Zo98lus",
+},
   title: 'Hydrosel Crane | Güçlü Araç Üstü Hidrolik Vinçler',
   description:
     'Güç ve Performansın Tek Adresi — Hydrosel Crane, ağır kaldırma operasyonları için maksimum hassasiyet, yüksek güvenlik ve üstün dayanıklılık sunan araç üstü hidrolik vinçler üretir.',
